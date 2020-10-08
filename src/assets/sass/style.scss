@@ -104,6 +104,8 @@ p {
 
 	display: flex;
 	justify-content: flex-end;
+
+	position: relative;
 }
 
 .contacts-phones__facebook {
@@ -125,6 +127,8 @@ p {
 	text-decoration: none;
 }
 
+
+
 .header__arrow {
 	margin: 0 0 0 5px;
 	display: inline-block;
@@ -136,28 +140,42 @@ p {
 	top: 3px;
 }
 
+.contacts-phones__block {
+	position: absolute;
+	white-space: nowrap;
+	display: none;
+	z-index: 20;
+	right: -20px;
+	top: 62%;
+	min-width: 219px;
+	line-height: 1.2;
+	padding: 35px 0 0;
+}
+
+.contacts-phones__main-phone:hover.contacts-phones__block{
+	display: block;
+}
 
 .contacts-phones__list {
-	padding: 20px 30px;
-	margin-top: 40px ;
-	margin-left: -20px;
+	padding: 20px 20px 20px 28px;
+
 	background: #ffffff;
 	filter: drop-shadow(0px 4px 45px rgba(0, 0, 0, 0.15));
 
-	position: absolute;
-
-	z-index: 20;
+	position: relative;
 }
 
 .contacts-phones__list:before {
 	content: '';
-	border: 8px solid #ffffff;
-	border-top: none;
-	border-right: transparent;
-	border-left: transparent;
+	width: 28px;
+	height: 28px;
+	background: white;
+
+	transform: rotateZ(45deg);
 	position: absolute;
-	right: 22px;
-	bottom: 100px;
+
+	right: 16px;
+	bottom: 86%;
 }
 
 .contacts-phones__list-item {
