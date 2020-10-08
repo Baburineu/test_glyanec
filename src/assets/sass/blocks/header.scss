@@ -1,0 +1,163 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 19px 0 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__text {
+    padding-top: 5px;
+}
+
+.header__text p{
+    width: 360px;
+    text-align: center;
+}
+
+.header__slogan {
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.header__work-time {
+    font-weight: 600;
+}
+
+
+.header__contacts {
+    padding-top: 10px;
+}
+
+.contacts-links__office {
+    padding-left: 20px;
+    background: url("../img/icons/user.png") no-repeat center left;
+
+    margin-right: 65px;
+}
+
+.contacts-phones {
+    padding-top: 20px;
+
+    display: flex;
+    justify-content: flex-end;
+
+    position: relative;
+}
+
+.contacts-phones__facebook {
+    margin-right: 20px;
+}
+
+.header__tel {
+    position: relative;
+
+    padding-left: 30px;
+    background: url("../img/icons/Handset.png") no-repeat center left;
+
+
+
+    &:hover .contacts-phones__block {
+        display: block;
+    }
+}
+
+.header__tel a {
+    font-size: 16px;
+    text-align: right;
+    font-weight: 600;
+    color: #3A4047;
+    text-decoration: none;
+}
+
+.header__arrow {
+    margin: 0 0 0 5px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../img/icons/Group 2.png") no-repeat center bottom;
+
+    position: relative;
+    top: 3px;
+}
+
+.contacts-phones__block {
+    position: absolute;
+    white-space: nowrap;
+    display: none;
+    z-index: 20;
+    right: -20px;
+    top: 62%;
+    min-width: 219px;
+    line-height: 1.2;
+    padding: 35px 0 0;
+
+
+}
+
+.contacts-phones__list {
+    padding: 20px 20px 20px 28px;
+
+    background: #ffffff;
+    filter: drop-shadow(0px 4px 45px rgba(0, 0, 0, 0.15));
+
+    position: relative;
+}
+
+.contacts-phones__list:before {
+    content: '';
+    width: 28px;
+    height: 28px;
+    background: white;
+
+    transform: rotateZ(45deg);
+    position: absolute;
+
+    right: 16px;
+    bottom: 86%;
+}
+
+.contacts-phones__list-item {
+    padding: 13px 0 12px  40px;
+
+    font-size: 16px;
+
+    &--vodafone {
+        background: url("../img/icons/Vodafone.png") no-repeat center left;
+    }
+
+    &--kyivstar {
+        background: url("../img/icons/Kyivstar.png") no-repeat center left;
+    }
+    &--life {
+        background: url("../img/icons/lifecell.png") no-repeat center left;
+    }
+}
+
+.header__cart {
+    width: 85px;
+    background: url("../img/icons/shopping-cart.png") no-repeat center left;
+
+    position: relative;
+}
+
+.counter {
+    width: 30px;
+    height: 30px;
+
+    color: #ffffff;
+    text-align: center;
+    line-height: 30px;
+    vertical-align: center;
+
+    background: #1AB0CE;
+    border-radius: 100px;;
+
+    position: absolute;
+    left: 35px;
+    top: 13px;
+}

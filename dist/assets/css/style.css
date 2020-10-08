@@ -47,8 +47,64 @@ p {
     padding: 0 15px;
 }
 
-/* Header
-===================================*/
+/* Fonts */
+@font-face {
+    font-family: 'Clear Sans';
+  src: local("Clear Sans Thin"), local("ClearSans-Thin"), url("/../../assets/fonts/clearsansthin.woff2") format("woff2"), url("/../../assets/fonts/clearsansthin.woff") format("woff"), url("/../../assets/fonts/clearsansthin.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Clear Sans';
+  src: local("Clear Sans Light"), local("ClearSans-Light"), url("/../../assets/fonts/clearsanslight.woff2") format("woff2"), url("/../../assets/fonts/clearsanslight.woff") format("woff"), url("/../../assets/fonts/clearsanslight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Clear Sans';
+  src: local("Clear Sans"), local("ClearSans"), url("/../../assets/fonts/clearsans.woff2") format("woff2"), url("/../../assets/fonts/clearsans.woff") format("woff"), url("/../../assets/fonts/clearsans.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Clear Sans';
+  src: local("Clear Sans Italic"), local("ClearSans-Italic"), url("/../../assets/fonts/clearsansitalic.woff2") format("woff2"), url("/../../assets/fonts/clearsansitalic.woff") format("woff"), url("/../../assets/fonts/clearsansitalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+    font-family: 'Clear Sans';
+  src: local("Clear Sans Medium"), local("ClearSans-Medium"), url("/../../assets/fonts/clearsansmedium.woff2") format("woff2"), url("/../../assets/fonts/clearsansmedium.woff") format("woff"), url("/../../assets/fonts/clearsansmedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Clear Sans';
+  src: local("Clear Sans Medium Italic"), local("ClearSans-MediumItalic"), url("/../../assets/fonts/clearsansmediumitalic.woff2") format("woff2"), url("/../../assets/fonts/clearsansmediumitalic.woff") format("woff"), url("/../../assets/fonts/clearsansmediumitalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+    font-family: 'Clear Sans';
+  src: local("Clear Sans Bold"), local("ClearSans-Bold"), url("/../../assets/fonts/clearsansbold.woff2") format("woff2"), url("/../../assets/fonts/clearsansbold.woff") format("woff"), url("/../../assets/fonts/clearsansbold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Clear Sans';
+  src: local("Clear Sans Bold Italic"), local("ClearSans-BoldItalic"), url("/../../assets/fonts/clearsansbolditalic.woff2") format("woff2"), url("/../../assets/fonts/clearsansbolditalic.woff") format("woff"), url("/../../assets/fonts/clearsansbolditalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Blocks */
 .header {
     display: flex;
     justify-content: space-between;
@@ -106,6 +162,10 @@ p {
     background: url("../img/icons/Handset.png") no-repeat center left;
 }
 
+.header__tel:hover .contacts-phones__block {
+    display: block;
+}
+
 .header__tel a {
     font-size: 16px;
     text-align: right;
@@ -134,10 +194,6 @@ p {
     min-width: 219px;
     line-height: 1.2;
     padding: 35px 0 0;
-}
-
-.contacts-phones__main-phone:hover.contacts-phones__block {
-    display: block;
 }
 
 .contacts-phones__list {
@@ -173,6 +229,26 @@ p {
 
 .contacts-phones__list-item--life {
     background: url("../img/icons/lifecell.png") no-repeat center left;
+}
+
+.header__cart {
+    width: 85px;
+    background: url("../img/icons/shopping-cart.png") no-repeat center left;
+    position: relative;
+}
+
+.counter {
+    width: 30px;
+    height: 30px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 30px;
+    vertical-align: center;
+    background: #1AB0CE;
+    border-radius: 100px;
+    position: absolute;
+    left: 35px;
+    top: 13px;
 }
 
 .nav-bar {
@@ -233,8 +309,6 @@ ul {
     height: 16px;
 }
 
-/* Intro
-======================================*/
 .intro {
     margin-bottom: 29px;
     display: flex;
@@ -278,33 +352,6 @@ ul {
     color: #ffffff;
 }
 
-/*Products
-======================================*/
-.products {
-    margin-bottom: 32px;
-}
-
-/*About us
-======================================*/
-.about_us {
-    margin-bottom: 33px;
-    border-bottom: 1px solid #E8EDF2;
-}
-
-.about_us__title {
-    margin-bottom: 13px;
-}
-
-.about_us__subtitle {
-    margin-bottom: 34px;
-}
-
-.about_us__content {
-    padding: 0 15px 40px;
-}
-
-/*Button
-======================================*/
 .btn {
     display: inline-block;
     vertical-align: top;
@@ -338,67 +385,61 @@ ul {
     border-radius: 2px;
 }
 
-/* Footer
-======================================*/
+.products {
+    margin-bottom: 32px;
+}
+
+.products__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product {
+    width: 370px;
+    padding: 30px;
+    border: 1px solid #DCE1E6;
+    box-sizing: border-box;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    background: url("../img/Products/blanck-page.png");
+}
+
+.product__title {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.product__list-item {
+    display: block;
+}
+
+.product__list-item a {
+    text-decoration: none;
+}
+
+.product__list-item:hover a {
+    text-decoration: underline;
+}
+
+.about_us {
+    margin-bottom: 33px;
+    border-bottom: 1px solid #E8EDF2;
+}
+
+.about_us__title {
+    margin-bottom: 13px;
+}
+
+.about_us__subtitle {
+    margin-bottom: 34px;
+}
+
+.about_us__content {
+    padding: 0 15px 40px;
+}
+
 footer {
     font-family: 'Roboto', sans-serif;
     background: url(noise.png), #F7F7F7;
     box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.05);
-}
-
-/* Fonts */
-@font-face {
-    font-family: 'Clear Sans';
-  src: local("Clear Sans Thin"), local("ClearSans-Thin"), url("/../../assets/fonts/clearsansthin.woff2") format("woff2"), url("/../../assets/fonts/clearsansthin.woff") format("woff"), url("/../../assets/fonts/clearsansthin.ttf") format("truetype");
-  font-weight: 200;
-  font-style: normal;
-}
-
-@font-face {
-    font-family: 'Clear Sans';
-  src: local("Clear Sans Light"), local("ClearSans-Light"), url("/../../assets/fonts/clearsanslight.woff2") format("woff2"), url("/../../assets/fonts/clearsanslight.woff") format("woff"), url("/../../assets/fonts/clearsanslight.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-    font-family: 'Clear Sans';
-  src: local("Clear Sans"), local("ClearSans"), url("/../../assets/fonts/clearsans.woff2") format("woff2"), url("/../../assets/fonts/clearsans.woff") format("woff"), url("/../../assets/fonts/clearsans.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-    font-family: 'Clear Sans';
-  src: local("Clear Sans Italic"), local("ClearSans-Italic"), url("/../../assets/fonts/clearsansitalic.woff2") format("woff2"), url("/../../assets/fonts/clearsansitalic.woff") format("woff"), url("/../../assets/fonts/clearsansitalic.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-    font-family: 'Clear Sans';
-  src: local("Clear Sans Medium"), local("ClearSans-Medium"), url("/../../assets/fonts/clearsansmedium.woff2") format("woff2"), url("/../../assets/fonts/clearsansmedium.woff") format("woff"), url("/../../assets/fonts/clearsansmedium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-    font-family: 'Clear Sans';
-  src: local("Clear Sans Medium Italic"), local("ClearSans-MediumItalic"), url("/../../assets/fonts/clearsansmediumitalic.woff2") format("woff2"), url("/../../assets/fonts/clearsansmediumitalic.woff") format("woff"), url("/../../assets/fonts/clearsansmediumitalic.ttf") format("truetype");
-  font-weight: 500;
-  font-style: italic;
-}
-
-@font-face {
-    font-family: 'Clear Sans';
-  src: local("Clear Sans Bold"), local("ClearSans-Bold"), url("/../../assets/fonts/clearsansbold.woff2") format("woff2"), url("/../../assets/fonts/clearsansbold.woff") format("woff"), url("/../../assets/fonts/clearsansbold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-    font-family: 'Clear Sans';
-  src: local("Clear Sans Bold Italic"), local("ClearSans-BoldItalic"), url("/../../assets/fonts/clearsansbolditalic.woff2") format("woff2"), url("/../../assets/fonts/clearsansbolditalic.woff") format("woff"), url("/../../assets/fonts/clearsansbolditalic.ttf") format("truetype");
-  font-weight: 700;
-  font-style: italic;
 }

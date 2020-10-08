@@ -1,0 +1,39 @@
+
+.products {
+    margin-bottom: 32px;
+
+}
+
+.products__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product {
+    width: 370px;
+    padding: 30px;
+
+    border: 1px solid #DCE1E6;
+    box-sizing: border-box;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    background: url("../img/Products/blanck-page.png");
+}
+
+.product__title {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.product__list-item {
+    display: block;
+
+    & a {
+        text-decoration: none;
+    }
+
+    &:hover a {
+        text-decoration: underline;
+    }
+}
+
