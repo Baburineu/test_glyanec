@@ -58,4 +58,29 @@ ul {
     height: 16px;
 }
 
+@media (max-width: 992px) {
+    .nav-bar__link {
+        padding: 15px 0;
+        font-size: 12px;
 
+        &:after {
+            left: 22px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-bar__menu {
+        flex-direction: column;
+    }
+
+    .nav-bar__link {
+        padding: 5px 0;
+        font-size: 12px;
+
+        &:after {
+            border-right: unset;
+        }
+    }
+
+}

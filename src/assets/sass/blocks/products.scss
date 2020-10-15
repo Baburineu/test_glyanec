@@ -4,6 +4,10 @@
 
 }
 
+.products h1 {
+    margin-bottom: 40px;
+}
+
 .products__container {
     display: flex;
     justify-content: space-between;
@@ -11,12 +15,26 @@
 
 .product {
     width: 370px;
-    padding: 30px;
+    padding: 25px 30px;
 
     border: 1px solid #DCE1E6;
     box-sizing: border-box;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-    background: url("../img/Products/blanck-page.png");
+
+
+}
+
+.product__inner {
+    padding-left: 80px;
+    background: url(../img/Products/blank-page.png) no-repeat top left;
+
+    &--advert {
+        background: url(../img/Products/road-map.png) no-repeat top left;
+    }
+
+    &--business {
+        background: url(../img/Products/e-reader.png) no-repeat top left;
+    }
 }
 
 .product__title {
@@ -25,11 +43,22 @@
     text-transform: uppercase;
 }
 
+.product__list {
+    padding-right: 45px;
+
+    display: inline-block;
+    vertical-align: top;
+
+}
+
 .product__list-item {
     display: block;
+    padding-top: 22px;
 
     & a {
+        color: #3A4047;
         text-decoration: none;
+        
     }
 
     &:hover a {
@@ -37,3 +66,18 @@
     }
 }
 
+
+@media (max-width: 992px) {
+    .products {
+        margin-bottom: 0;
+    }
+
+    .products__container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .product {
+        margin-bottom: 40px;
+    }
+}

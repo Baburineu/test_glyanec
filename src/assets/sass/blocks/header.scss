@@ -8,6 +8,7 @@
 .header__inner {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .header__text {
@@ -15,7 +16,7 @@
 }
 
 .header__text p{
-    width: 360px;
+    max-width: 360px;
     text-align: center;
 }
 
@@ -53,7 +54,7 @@
     margin-right: 20px;
 }
 
-.header__tel {
+.contacts-phones__tel {
     position: relative;
 
     padding-left: 30px;
@@ -66,7 +67,7 @@
     }
 }
 
-.header__tel a {
+.contacts-phones__tel a {
     font-size: 16px;
     text-align: right;
     font-weight: 600;
@@ -75,15 +76,15 @@
 }
 
 .header__arrow {
-    margin: 0 0 0 5px;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: url("../img/icons/Group 2.png") no-repeat center bottom;
+     margin: 0 0 0 5px;
+     display: inline-block;
+     width: 20px;
+     height: 20px;
+     background: url("../img/icons/Group 2.png") no-repeat center bottom;
 
-    position: relative;
-    top: 3px;
-}
+     position: relative;
+     top: 3px;
+ }
 
 .contacts-phones__block {
     position: absolute;
@@ -91,7 +92,7 @@
     display: none;
     z-index: 20;
     right: -20px;
-    top: 62%;
+    top: 30%;
     min-width: 219px;
     line-height: 1.2;
     padding: 35px 0 0;
@@ -106,19 +107,19 @@
     filter: drop-shadow(0px 4px 45px rgba(0, 0, 0, 0.15));
 
     position: relative;
-}
 
-.contacts-phones__list:before {
-    content: '';
-    width: 28px;
-    height: 28px;
-    background: white;
+    &:before {
+        content: '';
+        width: 28px;
+        height: 28px;
+        background: white;
 
-    transform: rotateZ(45deg);
-    position: absolute;
+        transform: rotateZ(45deg);
+        position: absolute;
 
-    right: 16px;
-    bottom: 86%;
+        right: 16px;
+        bottom: 86%;
+    }
 }
 
 .contacts-phones__list-item {
@@ -126,6 +127,9 @@
 
     font-size: 16px;
 
+    & a {
+        font-weight: 400;
+    }
     &--vodafone {
         background: url("../img/icons/Vodafone.png") no-repeat center left;
     }
@@ -143,6 +147,7 @@
     background: url("../img/icons/shopping-cart.png") no-repeat center left;
 
     position: relative;
+    cursor: pointer;
 }
 
 .counter {
@@ -160,4 +165,141 @@
     position: absolute;
     left: 35px;
     top: 13px;
+}
+
+.call-me-now {
+    position: fixed;
+
+    right: 30px;
+    bottom: 50px;
+
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    background: #1ab0ce;
+
+    cursor: pointer;
+    z-index: 1;
+
+    &:before {
+            pointer-events: none;
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(68, 207, 82, 0.12);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+            backface-visibility: hidden;
+    }
+}
+
+.call-me-now__text {
+    padding-top: 50px;
+    color: #ffffff;
+    font-weight: 500;
+    text-align: center;
+
+
+    background: url("../img/icons/phone.png")no-repeat center 37%;
+}
+
+@keyframes pulse {
+0% {
+    transform: scale(1);
+    opacity: 1;
+    }
+50% {
+      opacity: 0.8;
+    }
+100% {
+    transform: scale(1.4);
+    opacity: 0;
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+    .contacts-links {
+        padding-right: 20px;
+        text-align: center;
+    }
+
+    .contacts-links__office {
+        margin: 0;
+    }
+
+    .contacts-links__mail {
+        padding-top: 10px;
+        display: block;
+    }
+}
+
+
+@media (max-width: 992px) {
+
+    .header__inner {
+        justify-content: space-around;
+    }
+
+    .contacts-phones {
+        padding-top: 5px;
+    }
+
+    .header__cart {
+        display: none;
+    }
+
+    .call-me-now {
+        width: 90px;
+        height: 90px;
+
+    }
+
+    .call-me-now__text {
+        background: none;
+        padding-top: 30px;
+
+        font-size: 12px;
+    }
+
+    .intro {
+        padding-top: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro {
+        padding-top: 100px;
+    }
+
+    .contacts-phones {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .header__slogan {
+        font-size: 15px;
+    }
+
+    .call-me-now {
+        width: 62px;
+        height: 62px;
+
+    }
+
+    .call-me-now__text {
+        background: none;
+        padding-top: 21px;
+
+        font-size: 9px;
+    }
+
 }
